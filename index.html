@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Search the gifs!</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <!-- Bootswatch Styling for Improving the Aesthetics -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
   <!-- Font Awesome CSS Icons (For cool glyphicons) -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Style to fix the issue of text extending past panel length -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <style>
     .panel-body a {
       word-break: break-all;
@@ -18,7 +21,7 @@
   <!-- Main Bootstrap Search -->
   <div class="container">
     <!-- Jumbotron for Title -->
-    <div class="jumbotron" style="background-color: #20315A ; color: white;">
+    <div class="jumbotron">
       <h1 class="text-center"><strong><i class="fa fa-caret-square-o-right"></i> Gif-tastic Search</strong></h1>
     </div>
     <!-- Row for Searching GIFS -->
@@ -28,15 +31,14 @@
         <!-- First panel is for handling the search parameters -->
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h3 class="panel-title"><strong><i class="fa  fa-search"></i>   Search Gifs!</strong></h3>
+            <h3 class="panel-title"><strong><i class="fa  fa-search"></i> Search Gifs!</strong></h3>
           </div>
           <div class="panel-body">
-              <div class="form-group">
-                <label for="search"> </label>
-                <input type="text" class="form-control" id="search-term">
-              </div>
-               <!-- Here we have our submit button -->
-              <button type="submit" class="btn btn-default add-button" id="run-search"><i class="fa fa-search"></i> Search</button>
+            <!-- Type your favorite gifs -->
+            <input type="search" id="search" placeholder="Gif topics">
+            <!-- Here we have our submit button -->
+            <button type="search" class="btn btn-default add-button" id="search-button"><i class="fa fa-search"></i> Add Gifs</button>
+            
           </div>
         </div>
       </div>
@@ -46,10 +48,14 @@
         <br>
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h3 class="panel-title"><strong><i class="fa fa-table"></i>   Press buttons  to activate gifs!</strong></h3>
+            <h3 class="panel-title"><strong><i class="fa fa-table"></i> Press buttons  to activate gifs!</strong></h3>
           </div>
-          <!-- This main panel will hold each of the resulting articles -->
-          <div class="panel-body" id="well-section">
+          <!-- This main panel will hold each of the resulting Gifs -->
+          <div id="trending">
+          </div>
+          <div id="recentsearches">
+          </div>
+          <div id="gifs">
           </div>
         </div>
       </div>
@@ -63,10 +69,10 @@
       </div>
     </div>
   </div>
-  <!-- jQuery JS
-  <script src="https://code.jquery.com/jquery.js"></script>-->
+  <!--  jQuery JS -->
+  <script src="https://code.jquery.com/jquery.js"></script>
   <!-- Link to jQuery CDN -->
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Code to the JavaScript File -->
   <script type="text/javascript" src="assets/javascript/command.js"></script>
 </body>

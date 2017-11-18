@@ -1,0 +1,55 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  line-height: 34px;
+  background-color: #fff;
+}
+
+.jumbotron{
+  background-color: white ; 
+  color: #2c3e4f;
+}
+
+p {
+  padding: 0px;
+  font-size: 15px;
+}
+
+
+.container {
+  overflow: hidden;
+  padding: 10px;
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+ 
+.container:hover button.btn:hover{
+  background: orange;
+  color: white;
+}
+
+#gifs {
+  margin-left: 10px;
+  columns: 5;
+}
+
+#gifs p {
+  font-weight: bold;
+  color: #2c3e4f;
+}
+
+#gif-buttons {
+  border: none;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 15px;
+  background: #2c3e4f;
+  height: 50px;
+  width: 115px;
+  color: white;
+  font-size: 10pt;
+}
+
+
+}
